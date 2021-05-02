@@ -77,7 +77,7 @@ sns.distplot(bikes['year'])
 plt.figure()
 
 plt.clf()
-sns.distplot(bikes['ex_showroom_price'])
+sns.distplot(bikes['price_difference'])
 plt.figure()
 
 
