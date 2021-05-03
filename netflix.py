@@ -1,8 +1,7 @@
 # -*- coding: utf-8 -*-
 """
-Created on Sat May  1 17:13:18 2021
 
-@author: fenix9514
+@author: Ákos Schméhl
 """
 
 import seaborn as sns
