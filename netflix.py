@@ -14,14 +14,18 @@ data = pd.read_csv('netflix_titles.csv')
 
 #Search for null values and drop them
 data_null=data.isnull().sum()
-#data.dropna(inplace=True)
+
 
 #dropped these because they are irrelevant information
 data = data.drop("show_id", axis= 1)
 data = data.drop("cast", axis= 1)
+#dropped director column since it has more than 2000 NaN values
+data = data.drop(["director"], axis= 1)
+
 
 #creating new year column from date_added column
 data["year"] = data.date_added.apply(lambda x: str(x).split(",")[-1])
+
 
 #most occuring date:2019
 top_year = data.year.value_counts()
